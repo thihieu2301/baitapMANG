@@ -1,14 +1,18 @@
 let arrDaySo = [];
 //nhập mảng tuỳu ý
 function nhapMang() {
-  let input = document.getElementById("nhapMang").value;
-  arrDaySo = input.split(",").map(Number);
-  document.getElementById("ketQua1").innerText = "1. Mảng đã nhập: " + arrDaySo;
+  let nhapMangSoNguyen = document.getElementById("nhapMang").value;
+  arrDaySo = nhapMangSoNguyen.split(",").map(Number);
+  document.getElementById("ketQuaMangSoNguyen").innerText =
+    "1. Mảng đã nhập: " + arrDaySo;
 }
 //1. tính tổng số dương
 function tongSoDuong() {
-  let sum = arrDaySo.filter((x) => x > 0).reduce((a, b) => a + b, 0);
-  document.getElementById("ketQua2").innerText = "2. Tổng số dương : " + sum;
+  let tinhTongSoDuong = arrDaySo
+    .filter((x) => x > 0)
+    .reduce((a, b) => a + b, 0);
+  document.getElementById("ketQua2").innerText =
+    "2. Tổng số dương : " + tinhTongSoDuong;
 }
 //2. đếm số dương
 function demSoDuong() {
@@ -56,18 +60,17 @@ function sapXepTangDan() {
   document.getElementById("ketQua8").innerText =
     "8. Mảng sắp xếp tăng dần: " + arrDaySo.sort((a, b) => a - b);
 }
-
-function timSoNguyenToDauTien() {
-  function isPrime(n) {
-    if (n < 2) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-      if (n % i === 0) return false;
-    }
-    return true;
-  }
-  let soNT = arrDaySo.find((x) => isPrime(x)) || -1;
+let arrDaySoThuc = [];
+function nhapMangSoThuc() {
+  let nhapMangSoThuc = document.getElementById("nhapSoThuc").value;
+  arrDaySoThuc = nhapMangSoThuc.split(",").map(Number);
+  document.getElementById("ketQuaMangSoThuc").innerText =
+    "Mảng số thực đã nhập: " + arrDaySoThuc;
+}
+function tinhTongCacSoNguyen() {
+  let soNguyenCanTim = +arrDaySoThuc.filter((x) => Number.isInteger(x)).length;
   document.getElementById("ketQua9").innerText =
-    "9. Số nguyên tố đầu tiên: " + soNT;
+    "Số lượng số nguyên trong mảng số thực: " + soNguyenCanTim;
 }
 function soSanhSoDuongVaAm() {
   let soDuong = arrDaySo.filter((x) => x > 0).length;

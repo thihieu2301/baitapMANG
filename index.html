@@ -26,6 +26,11 @@
       id="nhapMang"
       placeholder="Nhập các số, cách nhau bởi dấu phẩy"
     />
+    <input
+      type="text"
+      id="nhapSoThuc"
+      placeholder="Nhập các số thực, cách nhau bởi dấu phẩy"
+    />
     <button onclick="nhapMang()">1.Nhập Mảng</button>
     <button onclick="tongSoDuong()">2.Tổng số dương</button>
     <button onclick="demSoDuong()">3.Đếm số dương</button>
@@ -34,10 +39,14 @@
     <button onclick="soChanCuoiCung()">6.Tìm số chẵn cuối</button>
     <button onclick="doiViTri()">7.Đổi chỗ 2 giá trị</button>
     <button onclick="sapXepTangDan()">8.Sắp xếp tăng dần</button>
-    <button onclick="timSoNguyenToDauTien()">9.Tìm số nguyên tố đầu</button>
+
+    <button onclick="nhapMangSoThuc()">Nhập mảng số thực</button>
+    <button onclick="tinhTongCacSoNguyen()">
+      9.Tìm số nguyên trong mảng số thực
+    </button>
     <button onclick="soSanhSoDuongVaAm()">10.So sánh số dương và số âm</button>
     <h3 class="p-4">TRẢ KẾT QUẢ</h3>
-    <p id="ketQua1"></p>
+    <p id="ketQuaMangSoNguyen"></p>
     <p id="ketQua2"></p>
     <p id="ketQua3"></p>
     <p id="ketQua4"></p>
@@ -45,6 +54,7 @@
     <p id="ketQua6"></p>
     <p id="ketQua7"></p>
     <p id="ketQua8"></p>
+    <p id="ketQuaMangSoThuc"></p>
     <p id="ketQua9"></p>
     <p id="ketQua10"></p>
 
